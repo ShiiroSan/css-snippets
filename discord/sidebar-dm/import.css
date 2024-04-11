@@ -52,27 +52,27 @@
 }
 
 /* fix Activity panel */
-.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>[class*="activityPanel-"] {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.activityPanel_b73e7a  {
 	display: flex;
 	justify-content: center;
 }
 
-.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>[class*="activityPanel-"]>div {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.activityPanel_b73e7a >div {
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
 }
-
-.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>[class*="activityPanel-"]>div>div[class*="gameWrapper-"] {
+/*
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.activityPanel_b73e7a >div>div[class*="gameWrapper-"] {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>[class*="activityPanel-"]>div>div[class*="gameWrapper-"]>div[class*="info-"] {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.activityPanel_b73e7a >div>div[class*="gameWrapper-"]>div[class*="info-"] {
 	display: none;
 }
-
+*/
 /* action buttons when joining voice channel */
 .sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.wrapper_e832ee>.container__3792d>.actionButtons__85e3c {
 	display: flex;
@@ -110,7 +110,8 @@
 .sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.container__3792d>.avatarWrapper__500a6>.nameTag__77ab2 {
 	display: none;
 }
-
+/*
 .sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.container__3792d>[class*="directionRow-"] {
 	display: none;
 }
+*/
