@@ -47,7 +47,7 @@
 }
 
 /* only show Disconnect icon when joining on voice channel */
-.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.wrapper_e832ee>.container__3792d>div>[class*="inner-"] {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.wrapper_e832ee>.container__3792d>div>.inner_ab95dc {
 	display: none;
 }
 
@@ -74,18 +74,18 @@
 }
 
 /* action buttons when joining voice channel */
-.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.wrapper_e832ee>.container__3792d>[class*="actionButtons-"] {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.wrapper_e832ee>.container__3792d>.actionButtons__85e3c {
 	display: flex;
 	flex-direction: row;
 	scroll-snap-type: x mandatory;
 	overflow: scroll hidden;
 }
 
-.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.wrapper_e832ee>.container__3792d>[class*="actionButtons-"]>* {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.wrapper_e832ee>.container__3792d>.actionButtons__85e3c>* {
 	scroll-snap-align: center;
 }
 
-.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.wrapper_e832ee>.container__3792d>[class*="actionButtons-"]::-webkit-scrollbar {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.wrapper_e832ee>.container__3792d>.actionButtons__85e3c::-webkit-scrollbar {
 	display: none;
 }
 
