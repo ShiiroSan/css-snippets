@@ -1,65 +1,185 @@
 :root {
+    --member-list-type: "both";
     --member-list-width: 70px;
-    --member-list-focused-width: 240px;
     --member-list-transition: 200ms;
-    --member-list-focused-transition: 600ms;
+    --member-list-active-width: 240px;
+    --member-list-active-transition: 800ms;
 }
 
-/* unfocused-within membersWrap width */
-.membersWrap__5ca6b {
-    min-width: var(--member-list-width);
-    transition: ease-in-out var(--member-list-transition);
+@container style(--member-list-type: "focus") or style(--member-list-type: "hover") or style(--member-list-type: "both") {
+
+    /* unset membersWrap min-width */
+    .membersWrap__5ca6b {
+        min-width: unset !important;
+        width: unset !important;
+        flex-basis: unset !important;
+    }
+
+    /* unset member container max-width */
+    .membersWrap__5ca6b .members__573eb .member_aa4760 {
+        max-width: unset !important;
+    }
+
+    /* active membersWrap width */
+    .membersWrap__5ca6b .members__573eb {
+        width: var(--member-list-active-width);
+    }
+
+    .membersWrap__5ca6b * {
+        transition: width var(--member-list-active-transition), opacity var(--member-list-active-transition);
+    }
+
+    div[id^="popout"][style*="right:"]:has([class*="user"]) {
+        right: calc(var(--member-list-active-width) + 20px) !important;
+        transition: unset !important;
+    }
+
+    div[id^="popout"][style*="right:"]:has([class*="user"])>div {
+        transition: unset !important;
+        transform: unset !important;
+    }
 }
 
-.membersWrap__5ca6b .members__573eb {
-    width: var(--member-list-width);
+
+@container style(--member-list-type: "focus") or style(--member-list-type: "both") {
+    .membersWrap__5ca6b:not(:focus-within) .members__573eb {
+        width: var(--member-list-width);
+    }
+
+    .membersWrap__5ca6b:not(:focus-within) * {
+        transition: width var(--member-list-transition), opacity var(--member-list-transition);
+    }
+
+    *:has(.membersWrap__5ca6b:not(:focus-within)) div[id^="popout"][style*="right:"]:has([class*="user"]) {
+        right: calc(var(--member-list-width) + 20px) !important;
+        transition: right var(--member-list-transition) !important;
+    }
+
+    /* pointer eventers */
+    .membersWrap__5ca6b:not(:focus-within) .members__573eb {
+        cursor: pointer;
+    }
+
+    .membersWrap__5ca6b:not(:focus-within) .members__573eb * {
+        pointer-events: none;
+    }
+
+    /* hide user role category when not focus-within */
+    .membersWrap__5ca6b:not(:focus-within) .membersGroup_cad095 {
+        opacity: 0%;
+        height: 0px;
+    }
+
+    .membersWrap__5ca6b:not(:focus-within) .membersGroup_cad095:first-of-type {
+        padding: 10px 8px 0px 16px;
+    }
+
+    .membersWrap__5ca6b:not(:focus-within) .membersGroup_cad095:not(:first-of-type) {
+        padding: 0px 8px 0px 16px;
+    }
+
+    /* membersWrap height for not focus-within */
+    .membersWrap__5ca6b:not(:focus-within) .content_e8a0d1[aria-label="Members"] {
+        height: 100vh !important;
+    }
+
+    /* hide notes in private threads */
+    .membersWrap__5ca6b:not(:focus-within) .content_e8a0d1 [aria-label="Members"]>[class*="private_"]~div:last-child,
+    .membersWrap__5ca6b:not(:focus-within) .content_e8a0d1 [aria-label="Members"]>[class*="divider_"],
+    .membersWrap__5ca6b:not(:focus-within) .content_e8a0d1 [aria-label="Members"]>[class*="private_"] {
+        opacity: 0%;
+        transition: calc(var(--member-list-transition) - 100ms);
+    }
+
+    /* Fix new child div from memberlist that has its own width which brokes the previous commit */
+    *:has(.membersWrap__5ca6b:not(:focus-within)) [class*="membersListNotices_"]:not(:has(>div>div)) {
+        width: unset;
+    }
+
+    .membersWrap__5ca6b:not(:focus-within) .members__573eb .member_aa4760 .memberInner__4dac6 {
+        justify-content: center
+    }
+
+    .membersWrap__5ca6b:not(:focus-within) .members__573eb .member_aa4760 .memberInner__4dac6 .content_e8a0d1 {
+        visibility: hidden;
+        max-width: 0;
+    }
 }
 
-/* focused-within membersWrap width */
-.membersWrap__5ca6b:hover .members__573eb {
-    width: var(--member-list-focused-width);
-    transition: ease-in var(--member-list-focused-transition);
+
+@container style(--member-list-type: "hover") or style(--member-list-type: "both") {
+    .membersWrap__5ca6b:not(:hover) .members__573eb {
+        width: var(--member-list-width);
+        transition: var(--member-list-transition);
+    }
+
+    .membersWrap__5ca6b:not(:hover) * {
+        transition: width var(--member-list-transition), opacity var(--member-list-transition);
+    }
+
+    *:has(.membersWrap__5ca6b:not(:hover)) div[id^="popout"][style*="right:"]:has([class*="user"]) {
+        right: calc(var(--member-list-width) + 20px) !important;
+        transition: right var(--member-list-transition) !important;
+    }
+
+    /* pointer eventers */
+    .membersWrap__5ca6b:not(:hover) .members__573eb {
+        cursor: pointer;
+    }
+
+    .membersWrap__5ca6b:not(:hover) .members__573eb * {
+        pointer-events: none;
+    }
+
+    /* hide user role category when not hover */
+    .membersWrap__5ca6b:not(:hover) .membersGroup_cad095 {
+        opacity: 0%;
+        height: 0px;
+    }
+
+    .membersWrap__5ca6b:not(:hover) .membersGroup_cad095:first-of-type {
+        padding: 10px 8px 0px 16px;
+    }
+
+    .membersWrap__5ca6b:not(:hover) .membersGroup_cad095:not(:first-of-type) {
+        padding: 0px 8px 0px 16px;
+    }
+
+    /* membersWrap height for not focus-within */
+    .membersWrap__5ca6b:not(:hover) .content_e8a0d1[aria-label="Members"] {
+        height: 100vh !important;
+    }
+
+    /* hide notes in private threads */
+    .membersWrap__5ca6b:not(:hover) .content_e8a0d1 [aria-label="Members"]>[class*="private_"]~div:last-child,
+    .membersWrap__5ca6b:not(:hover) .content_e8a0d1 [aria-label="Members"]>[class*="divider_"],
+    .membersWrap__5ca6b:not(:hover) .content_e8a0d1 [aria-label="Members"]>[class*="private_"] {
+        opacity: 0%;
+        transition: calc(var(--member-list-transition) - 100ms);
+    }
+
+    /* Fix new child div from memberlist that has its own width which brokes the previous commit */
+    *:has(.membersWrap__5ca6b:not(:hover)) [class*="membersListNotices_"]:not(:has(>div>div)) {
+        width: unset;
+    }
+
+    .membersWrap__5ca6b:not(:hover) .members__573eb .member_aa4760 .memberInner__4dac6 {
+        justify-content: center
+    }
+
+    .membersWrap__5ca6b:not(:hover) .members__573eb .member_aa4760 .memberInner__4dac6 .content_e8a0d1 {
+        visibility: hidden;
+        max-width: 0;
+    }
 }
 
-/* pointer eventers */
-.membersWrap__5ca6b:not(:hover) .members__573eb {
-    cursor: pointer;
-}
 
-.membersWrap__5ca6b:not(:hover) .members__573eb>* {
-    pointer-events: none;
-}
+@container style(--member-list-type: "both") {
+    *:has(.membersWrap__5ca6b:hover) {
+        --member-list-type: "hover";
+    }
 
-/* hide user role category when not focus-within */
-.membersWrap__5ca6b:not(:hover) .membersGroup_cad095 {
-    opacity: 0%;
-    height: 0px;
-    transition: ease-out var(--member-list-transition);
-}
-
-.membersWrap__5ca6b:not(:hover) .membersGroup_cad095:first-of-type {
-    padding: 10px 8px 0px 16px;
-    content: "searchhhhh"
-}
-
-.membersWrap__5ca6b:not(:hover) .membersGroup_cad095:not(:first-of-type) {
-    padding: 0px 8px 0px 16px;
-}
-
-/* membersWrap height for not focus-within */
-.membersWrap__5ca6b:not(:hover) .content__690c5 {
-    height: 100vh !important;
-}
-
-/* hide notes in private threads */
-.membersWrap__5ca6b:not(:hover) .content__690c5>[class*="private_"]~div:last-child,
-.membersWrap__5ca6b:not(:hover) .content__690c5>[class*="divider_"],
-.membersWrap__5ca6b:not(:hover) .content__690c5>[class*="private_"] {
-    opacity: 0%;
-    transition: ease-out calc(var(--member-list-transition) - 0.5s);
-}
-
-/* Fix new child div from memberlist that has its own width which brokes the previous commit */
-*:has(.membersWrap__5ca6b:not(:hover)) .membersListNotices_a4cb13:not(:has(>div>div)) {
-    width: unset;
+    *:has(.membersWrap__5ca6b:focus-within) {
+        --member-list-type: "focus";
+    }
 }
