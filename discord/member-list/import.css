@@ -6,60 +6,60 @@
 }
 
 /* unfocused-within membersWrap width */
-.membersWrap__90226 {
+.membersWrap__5ca6b {
     min-width: var(--member-list-width);
     transition: ease-in-out var(--member-list-transition);
 }
 
-.membersWrap__90226 .members__9f47b {
+.membersWrap__5ca6b .members__573eb {
     width: var(--member-list-width);
 }
 
 /* focused-within membersWrap width */
-.membersWrap__90226:hover .members__9f47b {
+.membersWrap__5ca6b:hover .members__573eb {
     width: var(--member-list-focused-width);
     transition: ease-in var(--member-list-focused-transition);
 }
 
 /* pointer eventers */
-.membersWrap__90226:not(:hover) .members__9f47b {
+.membersWrap__5ca6b:not(:hover) .members__573eb {
     cursor: pointer;
 }
 
-.membersWrap__90226:not(:hover) .members__9f47b>* {
+.membersWrap__5ca6b:not(:hover) .members__573eb>* {
     pointer-events: none;
 }
 
 /* hide user role category when not focus-within */
-.membersWrap__90226:not(:hover) .membersGroup__85843 {
+.membersWrap__5ca6b:not(:hover) .membersGroup_cad095 {
     opacity: 0%;
     height: 0px;
     transition: ease-out var(--member-list-transition);
 }
 
-.membersWrap__90226:not(:hover) .membersGroup__85843:first-of-type {
+.membersWrap__5ca6b:not(:hover) .membersGroup_cad095:first-of-type {
     padding: 10px 8px 0px 16px;
     content: "searchhhhh"
 }
 
-.membersWrap__90226:not(:hover) .membersGroup__85843:not(:first-of-type) {
+.membersWrap__5ca6b:not(:hover) .membersGroup_cad095:not(:first-of-type) {
     padding: 0px 8px 0px 16px;
 }
 
 /* membersWrap height for not focus-within */
-.membersWrap__90226:not(:hover) .content__23cab {
+.membersWrap__5ca6b:not(:hover) .content__690c5 {
     height: 100vh !important;
 }
 
 /* hide notes in private threads */
-.membersWrap__90226:not(:hover) .content__23cab>[class*="private_"]~div:last-child,
-.membersWrap__90226:not(:hover) .content__23cab>[class*="divider_"],
-.membersWrap__90226:not(:hover) .content__23cab>[class*="private_"] {
+.membersWrap__5ca6b:not(:hover) .content__690c5>[class*="private_"]~div:last-child,
+.membersWrap__5ca6b:not(:hover) .content__690c5>[class*="divider_"],
+.membersWrap__5ca6b:not(:hover) .content__690c5>[class*="private_"] {
     opacity: 0%;
     transition: ease-out calc(var(--member-list-transition) - 0.5s);
 }
 
 /* Fix new child div from memberlist that has its own width which brokes the previous commit */
-*:has(.membersWrap__90226:not(:hover)) .membersListNotices_a4cb13:not(:has(>div>div)) {
+*:has(.membersWrap__5ca6b:not(:hover)) .membersListNotices_a4cb13:not(:has(>div>div)) {
     width: unset;
 }
