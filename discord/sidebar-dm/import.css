@@ -7,110 +7,110 @@
 }
 
 /* unfocused-within sidebar-dim width */
-[class*="sidebar-"]:has([aria-label*="Private"]) {
+.sidebar_e031be:has(.privateChannels__9b518) {
 	width: var(--sidebar-dm-width);
 	transition: ease-out var(--sidebar-dm-transition);
 }
 
 /* focused-within sidebar-dim width */
-[class*="sidebar-"]:has([aria-label*="Private"]):focus-within {
+.sidebar_e031be:has(.privateChannels__9b518):focus-within {
 	width: var(--sidebar-dm-focused-width);
 	transition: ease-in var(--sidebar-dm-focused-transition);
 }
 
 /* pointer events*/
-[class*="sidebar-"]:has([aria-label*="Private"]):not(focus-within)>*>*>* {
+.sidebar_e031be:has(.privateChannels__9b518):not(focus-within)>*>*>* {
 	cursor: pointer;
 }
 
-[class*="sidebar-"]:has([aria-label*="Private"]):not(:focus-within)>nav>*>*>* {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>nav>*>*>* {
 	pointer-events: none;
 }
 
 /* don't show close dm button when hovering to avatar until it's focus-within */
-[class*="sidebar-"]:has([aria-label*="Private"]):not(:focus-within)>nav>[class*="scroller-"]>ul>li:focus-within>div>[class*="closeButton"] {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>nav>.scroller__89969>ul>li:focus-within>div>.closeButton__116c3 {
 	display: none;
 }
 
 /* hide direct message header category */
-[class*="sidebar-"]:has([aria-label*="Private"]):not(:focus-within)>nav>[class*="scroller-"]>ul>[class*="privateChannelsHeaderContainer-"] {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>nav>.scroller__89969>ul>.privateChannelsHeaderContainer_b22dc9 {
 	display: none;
 }
 
-[class*="sidebar-"]:has([aria-label*="Private"]):focus-within>nav>[class*="scroller-"]>ul>[class*="privateChannelsHeaderContainer-"] {
+.sidebar_e031be:has(.privateChannels__9b518):focus-within>nav>.scroller__89969>ul>.privateChannelsHeaderContainer_b22dc9 {
 	display: var(--sidebar-dm-display-header);
 }
 
 /* hide conversation searchBar*/
-[class*="sidebar-"]:has([aria-label*="Private"])>nav>[class*="searchBar-"] {
+.sidebar_e031be:has(.privateChannels__9b518)>nav>.searchBar__621ec {
 	display: none;
 }
 
 /* only show Disconnect icon when joining on voice channel */
-[class*="sidebar-"]:has([aria-label*="Private"]):not(:focus-within)>[class*="panels-"]>[class*="wrapper-"]>[class*="container-"]>div>[class*="inner-"] {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.wrapper_e832ee>.container__3792d>div>[class*="inner-"] {
 	display: none;
 }
 
 /* fix Activity panel */
-[class*="sidebar-"]:has([aria-label*="Private"]):not(:focus-within)>[class*="panels-"]>[class*="activityPanel-"] {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>[class*="activityPanel-"] {
 	display: flex;
 	justify-content: center;
 }
 
-[class*="sidebar-"]:has([aria-label*="Private"]):not(:focus-within)>[class*="panels-"]>[class*="activityPanel-"]>div {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>[class*="activityPanel-"]>div {
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
 }
 
-[class*="sidebar-"]:has([aria-label*="Private"]):not(:focus-within)>[class*="panels-"]>[class*="activityPanel-"]>div>div[class*="gameWrapper-"] {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>[class*="activityPanel-"]>div>div[class*="gameWrapper-"] {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-[class*="sidebar-"]:has([aria-label*="Private"]):not(:focus-within)>[class*="panels-"]>[class*="activityPanel-"]>div>div[class*="gameWrapper-"]>div[class*="info-"] {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>[class*="activityPanel-"]>div>div[class*="gameWrapper-"]>div[class*="info-"] {
 	display: none;
 }
 
 /* action buttons when joining voice channel */
-[class*="sidebar-"]:has([aria-label*="Private"]):not(:focus-within)>[class*="panels-"]>[class*="wrapper-"]>[class*="container-"]>[class*="actionButtons-"] {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.wrapper_e832ee>.container__3792d>[class*="actionButtons-"] {
 	display: flex;
 	flex-direction: row;
 	scroll-snap-type: x mandatory;
 	overflow: scroll hidden;
 }
 
-[class*="sidebar-"]:has([aria-label*="Private"]):not(:focus-within)>[class*="panels-"]>[class*="wrapper-"]>[class*="container-"]>[class*="actionButtons-"]>* {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.wrapper_e832ee>.container__3792d>[class*="actionButtons-"]>* {
 	scroll-snap-align: center;
 }
 
-[class*="sidebar-"]:has([aria-label*="Private"]):not(:focus-within)>[class*="panels-"]>[class*="wrapper-"]>[class*="container-"]>[class*="actionButtons-"]::-webkit-scrollbar {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.wrapper_e832ee>.container__3792d>[class*="actionButtons-"]::-webkit-scrollbar {
 	display: none;
 }
 
 /* show only your profile picture on sidebar */
-[class*="sidebar-"]:has([aria-label*="Private"]):not(:focus-within)>[class*="panels-"]>[class*="container-"] {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.container__3792d {
 	margin-left: 0px;
 	justify-content: center;
 }
 
-[class*="sidebar-"]:has([aria-label*="Private"]):focus-within>[class*="panels-"]>[class*="container-"]>[class*="avatarWrapper-"] {
+.sidebar_e031be:has(.privateChannels__9b518):focus-within>.panels__58331>.container__3792d>.avatarWrapper__500a6 {
 	padding-left: 2px;
 	margin-left: 2px;
 }
 
-[class*="sidebar-"]:has([aria-label*="Private"]):not(:focus-within)>[class*="panels-"]>[class*="container-"]>[class*="avatarWrapper-"] {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.container__3792d>.avatarWrapper__500a6 {
 	min-width: 34px;
 	min-height: 37px;
 	margin-left: 0px;
 	padding-left: 0px;
 }
 
-[class*="sidebar-"]:has([aria-label*="Private"]):not(:focus-within)>[class*="panels-"]>[class*="container-"]>[class*="avatarWrapper-"]>[class*="nameTag-"] {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.container__3792d>.avatarWrapper__500a6>.nameTag__77ab2 {
 	display: none;
 }
 
-[class*="sidebar-"]:has([aria-label*="Private"]):not(:focus-within)>[class*="panels-"]>[class*="container-"]>[class*="directionRow-"] {
+.sidebar_e031be:has(.privateChannels__9b518):not(:focus-within)>.panels__58331>.container__3792d>[class*="directionRow-"] {
 	display: none;
 }
