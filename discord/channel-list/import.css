@@ -9,12 +9,6 @@
 
 @container style(--sidebar-channel-type: "focus") or style(--sidebar-channel-type: "hover") or style(--sidebar-channel-type: "both") {
 
-    /* channel link icon */
-    .sidebar_e031be:has(.container__7e23c)>nav>.scroller__1f498>ul.content__690c5 li .link_ddbb36 svg[class*="icon"] {
-        width: var(--sidebar-channel-icon-size);
-        height: var(--sidebar-channel-icon-size);
-    }
-
     /* remove left dot for unread channel */
     .unread__48cf4 {
         display: none;
@@ -26,17 +20,12 @@
         color: var(--interactive-active);
     }
 
-    /* remove channels icon when there's channel emoji */
-    .sidebar_e031be:has(.container__7e23c)>nav>.scroller__1f498>ul.content__690c5 li>div>div a:has(> :nth-child(n + 2))>[class*="linkTop_"]:has([class*="channelEmoji_"])>.iconContainer__6a580 {
-        display: none;
-    }
-
     .sidebar_e031be:has(.container__7e23c)>nav * {
         transition: var(--sidebar-channel-active-transition);
     }
 
-    .sidebar_e031be:has(.container__7e23c) [class*="animatedContainer_"] [class*="bannerImage_"],
-    .sidebar_e031be:has(.container__7e23c) [class*="animatedContainer_"] [class*="bannerImage_"] img {
+    .sidebar_e031be:has(.container__7e23c) .animatedContainer__0e828 .bannerImage_c73a57,
+    .sidebar_e031be:has(.container__7e23c) .animatedContainer__0e828 .bannerImage_c73a57 img {
         width: var(--member-list-active-width);
         opacity: 1;
         transition: opacity calc(var(--member-list-active-transition) + 1500ms);
@@ -48,9 +37,7 @@
         transition: var(--sidebar-channel-active-transition);
     }
 
-    .sidebar_e031be:has(.container__7e23c) header [class*="headerContent"],
-    .sidebar_e031be:has(.container__7e23c)>nav>.scroller__1f498>ul.content__690c5 li[tabindex="0"] .link_ddbb36>div[class^="content_"]:has(>.iconContainer__6a580),
-    .sidebar_e031be:has(.container__7e23c)>nav>.scroller__1f498>ul.content__690c5 li[tabindex="-1"] .link_ddbb36>div[class^="content_"]:has(>.iconContainer__6a580) {
+    .sidebar_e031be:has(.container__7e23c) header .headerContent__6fcc7 {
         justify-content: center
     }
 
@@ -89,97 +76,12 @@
 
     /* channel link to only display icons by hiding other elements*/
     .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>.scroller__1f498>ul.content__690c5 li .link_ddbb36 .name_e8e549,
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>.scroller__1f498>ul.content__690c5 li .link_ddbb36 div[class*="children_"],
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>.scroller__1f498>ul.content__690c5 li .link_ddbb36 div[class*="textBadge_"],
     .sidebar_e031be:has(.container__7e23c)>nav>.scroller__1f498>ul.content__690c5 li .linkBottom__942a1 {
         display: none;
     }
 
-    /* added padding-left when not focused-within to fix some channel that aren't horizontally centered */
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>.scroller__1f498>ul.content__690c5 li:has(.link_ddbb36):not(:has(div[class*="children_"])) {
-        padding-left: 4px;
-    }
-
-    /* channel category to be hidden when not active */
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>.scroller__1f498>ul.content__690c5 li:has([aria-label*="(category)"]) svg[class*="arrow_"] {
-        display: none
-    }
-
-    /* channel link threads to be hidden when not active  */
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>.scroller__1f498>ul.content__690c5 li:has(div[class*="spineBorder_"]):has(div[aria-label*="(thread)"]) {
-        display: none
-    }
-
-    /* remove list on voice channel's */
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>.scroller__1f498>ul.content__690c5 li>div[class*="list_"] {
-        display: none
-    }
-
-    /* hide channel's "Hide Voice Channels" and "Show All" when not active */
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>.scroller__1f498>ul.content__690c5>div[class*="voiceChannelsButton_"]>* {
-        display: none
-    }
-
-    /* only show "..." on "Hide Voice Channels" and "Show All" when not active */
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>.scroller__1f498>ul.content__690c5>div[class*="voiceChannelsButton_"]:before {
-        margin-left: 8px;
-        display: flex;
-        justify-content: center;
-        font-weight: 600;
-        font-family: var(--font-primary);
-        font-size: 14px;
-        line-height: 18px;
-        color: var(--text-normal);
-        content: "..."
-    }
-
     /* only show channel's boost progressBar level when not active */
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>.scroller__1f498>ul.content__690c5>div[class*="divider_"],
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>.scroller__1f498>ul.content__690c5>div.progressBarContainer_e11b41,
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>.scroller__1f498>ul.content__690c5>div[aria-label*="Boost"] {
-        display: none
-    }
-
-    /* only show down arrow on New unread */
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>div div[class*="bar_"]:has([class*="barText_"]):has(svg)>div {
-        display: none;
-    }
-
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>div div[class*="bar_"]:has([class*="barText_"])>svg {
-        margin-right: 0px;
-    }
-
-    /* only show "NEW" on new mention */
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>div div[class*="bar_"]:has([class*="barText_"]):not(:has(svg))>div {
-        display: none
-    }
-
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>div div[class*="bar_"]:has([class*="barText_"]):not(:has(svg)):before {
-        content: "new";
-        font-size: 12px;
-        line-height: 16px;
-        font-family: var(--font-display);
-        font-weight: 600;
-        color: var(--white-500);
-        text-transform: uppercase;
-    }
-
-    /* hide category name when not active */
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within) ul.content__690c5 .containerDefault_ae2ea4:has([class*="arrow_"]) h3[class*="name"] [class^="overflow"] {
-        display: none
-    }
-
-    /* only show "..." on category name when not active */
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within) ul.content__690c5 .containerDefault_ae2ea4:has([class*="arrow_"]) h3[class*="name"]:before {
-        display: flex;
-        justify-content: center;
-        font-family: var(--font-primary);
-        line-height: 16px;
-        color: var(--channels-default);
-        content: "..."
-    }
-
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within) ul.content__690c5 .containerDefault_ae2ea4:has([class*="arrow_"]) div[class*="children"] {
+    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>nav>.scroller__1f498>ul.content__690c5>div.progressBarContainer_e11b41 {
         display: none
     }
 
@@ -188,26 +90,15 @@
         transition: inherit !important;
     }
 
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within) [class*="animatedContainer_"] {
+    .sidebar_e031be:has(.container__7e23c):not(:focus-within) .animatedContainer__0e828 {
         height: 0;
         opacity: 0 !important;
         transition: none !important;
     }
 
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within) [class*="animatedContainer_"] [class*="bannerImage_"],
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within) [class*="animatedContainer_"] [class*="bannerImage_"] img {
+    .sidebar_e031be:has(.container__7e23c):not(:focus-within) .animatedContainer__0e828 .bannerImage_c73a57,
+    .sidebar_e031be:has(.container__7e23c):not(:focus-within) .animatedContainer__0e828 .bannerImage_c73a57 img {
         opacity: 0;
-    }
-
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within) ul.content__690c5:has(>div[style^="height:"]:nth-child(2)) div[aria-hidden="true"]:first-child {
-        position: absolute;
-        transition: none !important;
-    }
-
-    /* only show Disconnect icon when joining on voice channel */
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>.panels__58331>.wrapper_e832ee>.container_e1958d>div>[class*="inner_"],
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>.panels__58331>.wrapper_e832ee>.container_e1958d>div>div>[aria-label*="Noise Suppression"] {
-        display: none;
     }
 
     /* fix Activity panel */
@@ -220,16 +111,6 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
-    }
-
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>.panels__58331>.activityPanel_b73e7a>div>div[class*="gameWrapper_"] {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>.panels__58331>.activityPanel_b73e7a>div>div[class*="gameWrapper_"]>div[class*="info_"] {
-        display: none;
     }
 
     /* action buttons when joining voice channel */
@@ -274,10 +155,6 @@
         display: none;
     }
 
-    .sidebar_e031be:has(.container__7e23c):not(:focus-within)>.panels__58331>.container_e1958d>[class*="directionRow_"] {
-        display: none;
-    }
-
     .sidebar_e031be:has(.container__7e23c)>.panels__58331>.container_e1958d {
         display: flex;
         justify-content: space-between;
@@ -316,97 +193,12 @@
 
     /* channel link to only display icons by hiding other elements*/
     .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>.scroller__1f498>ul.content__690c5 li .link_ddbb36 .name_e8e549,
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>.scroller__1f498>ul.content__690c5 li .link_ddbb36 div[class*="children_"],
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>.scroller__1f498>ul.content__690c5 li .link_ddbb36 div[class*="textBadge_"],
     .sidebar_e031be:has(.container__7e23c)>nav>.scroller__1f498>ul.content__690c5 li .linkBottom__942a1 {
         display: none;
     }
 
-    /* added padding-left when not focused-within to fix some channel that aren't horizontally centered */
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>.scroller__1f498>ul.content__690c5 li:has(.link_ddbb36):not(:has(div[class*="children_"])) {
-        padding-left: 4px;
-    }
-
-    /* channel category to be hidden when not active */
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>.scroller__1f498>ul.content__690c5 li:has([aria-label*="(category)"]) svg[class*="arrow_"] {
-        display: none
-    }
-
-    /* channel link threads to be hidden when not active  */
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>.scroller__1f498>ul.content__690c5 li:has(div[class*="spineBorder_"]):has(div[aria-label*="(thread)"]) {
-        display: none
-    }
-
-    /* remove list on voice channel's */
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>.scroller__1f498>ul.content__690c5 li>div[class*="list_"] {
-        display: none
-    }
-
-    /* hide channel's "Hide Voice Channels" and "Show All" when not active */
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>.scroller__1f498>ul.content__690c5>div[class*="voiceChannelsButton_"]>* {
-        display: none
-    }
-
-    /* only show "..." on "Hide Voice Channels" and "Show All" when not active */
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>.scroller__1f498>ul.content__690c5>div[class*="voiceChannelsButton_"]:before {
-        margin-left: 8px;
-        display: flex;
-        justify-content: center;
-        font-weight: 600;
-        font-family: var(--font-primary);
-        font-size: 14px;
-        line-height: 18px;
-        color: var(--text-normal);
-        content: "..."
-    }
-
     /* only show channel's boost progressBar level when not active */
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>.scroller__1f498>ul.content__690c5>div[class*="divider_"],
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>.scroller__1f498>ul.content__690c5>div.progressBarContainer_e11b41,
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>.scroller__1f498>ul.content__690c5>div[aria-label*="Boost"] {
-        display: none
-    }
-
-    /* only show down arrow on New unread */
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>div div[class*="bar_"]:has([class*="barText_"]):has(svg)>div {
-        display: none;
-    }
-
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>div div[class*="bar_"]:has([class*="barText_"])>svg {
-        margin-right: 0px;
-    }
-
-    /* only show "NEW" on new mention */
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>div div[class*="bar_"]:has([class*="barText_"]):not(:has(svg))>div {
-        display: none
-    }
-
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>div div[class*="bar_"]:has([class*="barText_"]):not(:has(svg)):before {
-        content: "new";
-        font-size: 12px;
-        line-height: 16px;
-        font-family: var(--font-display);
-        font-weight: 600;
-        color: var(--white-500);
-        text-transform: uppercase;
-    }
-
-    /* hide category name when not active */
-    .sidebar_e031be:has(.container__7e23c):not(:hover) ul.content__690c5 .containerDefault_ae2ea4:has([class*="arrow_"]) h3[class*="name"] [class^="overflow"] {
-        display: none
-    }
-
-    /* only show "..." on category name when not active */
-    .sidebar_e031be:has(.container__7e23c):not(:hover) ul.content__690c5 .containerDefault_ae2ea4:has([class*="arrow_"]) h3[class*="name"]:before {
-        display: flex;
-        justify-content: center;
-        font-family: var(--font-primary);
-        line-height: 16px;
-        color: var(--channels-default);
-        content: "..."
-    }
-
-    .sidebar_e031be:has(.container__7e23c):not(:hover) ul.content__690c5 .containerDefault_ae2ea4:has([class*="arrow_"]) div[class*="children"] {
+    .sidebar_e031be:has(.container__7e23c):not(:hover)>nav>.scroller__1f498>ul.content__690c5>div.progressBarContainer_e11b41 {
         display: none
     }
 
@@ -415,26 +207,15 @@
         transition: inherit !important;
     }
 
-    .sidebar_e031be:has(.container__7e23c):not(:hover) [class*="animatedContainer_"] {
+    .sidebar_e031be:has(.container__7e23c):not(:hover) .animatedContainer__0e828 {
         height: 0;
         opacity: 0 !important;
         transition: none !important;
     }
 
-    .sidebar_e031be:has(.container__7e23c):not(:hover) [class*="animatedContainer_"] [class*="bannerImage_"],
-    .sidebar_e031be:has(.container__7e23c):not(:hover) [class*="animatedContainer_"] [class*="bannerImage_"] img {
+    .sidebar_e031be:has(.container__7e23c):not(:hover) .animatedContainer__0e828 .bannerImage_c73a57,
+    .sidebar_e031be:has(.container__7e23c):not(:hover) .animatedContainer__0e828 .bannerImage_c73a57 img {
         opacity: 0;
-    }
-
-    .sidebar_e031be:has(.container__7e23c):not(:hover) ul.content__690c5:has(>div[style^="height:"]:nth-child(2)) div[aria-hidden="true"]:first-child {
-        position: absolute;
-        transition: none !important;
-    }
-
-    /* only show Disconnect icon when joining on voice channel */
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>.panels__58331>.wrapper_e832ee>.container_e1958d>div>[class*="inner_"],
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>.panels__58331>.wrapper_e832ee>.container_e1958d>div>div>[aria-label*="Noise Suppression"] {
-        display: none;
     }
 
     /* fix Activity panel */
@@ -447,16 +228,6 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
-    }
-
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>.panels__58331>.activityPanel_b73e7a>div>div[class*="gameWrapper_"] {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>.panels__58331>.activityPanel_b73e7a>div>div[class*="gameWrapper_"]>div[class*="info_"] {
-        display: none;
     }
 
     /* action buttons when joining voice channel */
@@ -498,10 +269,6 @@
     }
 
     .sidebar_e031be:has(.container__7e23c):not(:hover)>.panels__58331>.container_e1958d>.avatarWrapper__500a6>.nameTag__77ab2 {
-        display: none;
-    }
-
-    .sidebar_e031be:has(.container__7e23c):not(:hover)>.panels__58331>.container_e1958d>[class*="directionRow_"] {
         display: none;
     }
 
